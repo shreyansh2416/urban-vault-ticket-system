@@ -1,1 +1,1108 @@
 [
+{
+    "model": "tickets.user",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$fZvCukrDlfI5n6mkigtI6g$8EHR8yYDqbOoKQs51VAfQFmumhAHHuJ+TO8apVbJ6CM=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@example.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-09-24T01:39:35.336Z",
+        "role": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tickets.user",
+    "pk": 10,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$DLHyobXt5j5ish1K99w0fC$JU3z0Zt4mZilJOUAtXMfFZnhlzb71oVQREEnLM25Ywg=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "chaitya_m",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-09-24T01:39:35.597Z",
+        "role": "CLIENT",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tickets.user",
+    "pk": 11,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$bjnWD87s50vU2gVZfuYu6l$TH/rLTaTHYsr2mmoxTIYEmSlsq2w7qOpEXVPEp7Cph0=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "chandan_s",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-09-24T01:39:35.873Z",
+        "role": "FACILITY_MANAGER",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tickets.user",
+    "pk": 12,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$SRP2RPosommrzkzzOeWKNK$rX5ayeCswuHmhSISyQAFRPSnv3Sza7MnDf5RtOTR/s4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "dept_poc",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-09-24T01:39:36.193Z",
+        "role": "DEPARTMENT_POC",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tickets.user",
+    "pk": 13,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$mTajpks93oZeJKgu46D4tp$6xeQAy4cGdCS3XaZh4fMD913OGM4YKxo6AXbwYDNFxc=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "dhananjaya_m",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-09-24T01:39:36.519Z",
+        "role": "TECH_MANAGER",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tickets.user",
+    "pk": 14,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$iIA8NNISLRuvq1yxMziBot$U7Q5NYEnwzHQafE/O7oYLRfgdwQGENYxC/Htu/bJhC8=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "prakash_k",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-09-24T01:39:36.799Z",
+        "role": "TECHNICIAN",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 44,
+    "fields": {
+        "title": "Ticket #1 - Internet Not Working",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "IT",
+        "status": "PENDING_TECH_ASSESSMENT",
+        "created_at": "2026-09-24T01:39:37.085Z",
+        "updated_at": "2026-09-24T02:13:46.307Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": null
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 45,
+    "fields": {
+        "title": "Ticket #2 - AC not cooling",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "Facilities",
+        "status": "OPEN",
+        "created_at": "2026-09-24T01:39:37.096Z",
+        "updated_at": "2026-09-24T01:39:37.096Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": null
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 46,
+    "fields": {
+        "title": "Ticket #3 - Internet Not Working",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "IT",
+        "status": "PENDING_TECH_ASSIGNMENT",
+        "created_at": "2026-09-24T01:39:37.106Z",
+        "updated_at": "2026-09-24T01:39:37.106Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": 13
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 47,
+    "fields": {
+        "title": "Ticket #4 - AC not cooling",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "Facilities",
+        "status": "PENDING_TECH_ASSESSMENT",
+        "created_at": "2026-09-24T01:39:37.114Z",
+        "updated_at": "2026-09-24T01:39:37.114Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": 14
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 48,
+    "fields": {
+        "title": "Ticket #5 - Internet Not Working",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "IT",
+        "status": "OPEN",
+        "created_at": "2026-09-24T01:39:37.121Z",
+        "updated_at": "2026-09-24T01:39:37.121Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": null
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 49,
+    "fields": {
+        "title": "Ticket #6 - AC not cooling",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "Facilities",
+        "status": "PENDING_TECH_ASSIGNMENT",
+        "created_at": "2026-09-24T01:39:37.129Z",
+        "updated_at": "2026-09-24T01:39:37.129Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": 13
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 50,
+    "fields": {
+        "title": "Ticket #7 - Internet Not Working",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "IT",
+        "status": "PENDING_TECH_ASSESSMENT",
+        "created_at": "2026-09-24T01:39:37.138Z",
+        "updated_at": "2026-09-24T02:11:09.664Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": null
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 51,
+    "fields": {
+        "title": "Ticket #8 - AC not cooling",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "Facilities",
+        "status": "PENDING_TECH_ASSESSMENT",
+        "created_at": "2026-09-24T01:39:37.150Z",
+        "updated_at": "2026-09-24T01:39:37.150Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": 14
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 52,
+    "fields": {
+        "title": "Ticket #9 - Internet Not Working",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "IT",
+        "status": "PENDING_TECH_ASSIGNMENT",
+        "created_at": "2026-09-24T01:39:37.158Z",
+        "updated_at": "2026-09-24T01:39:37.158Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": 13
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 53,
+    "fields": {
+        "title": "Ticket #10 - AC not cooling",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "Facilities",
+        "status": "OPEN",
+        "created_at": "2026-09-24T01:39:37.165Z",
+        "updated_at": "2026-09-24T01:39:37.165Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": null
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 54,
+    "fields": {
+        "title": "Ticket #11 - Internet Not Working",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "IT",
+        "status": "OPEN",
+        "created_at": "2026-09-24T01:39:37.174Z",
+        "updated_at": "2026-09-24T01:39:37.174Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": null
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 55,
+    "fields": {
+        "title": "Ticket #12 - AC not cooling",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "Facilities",
+        "status": "PENDING_TECH_ASSIGNMENT",
+        "created_at": "2026-09-24T01:39:37.182Z",
+        "updated_at": "2026-09-24T01:39:37.182Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": 13
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 56,
+    "fields": {
+        "title": "Ticket #13 - Internet Not Working",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "IT",
+        "status": "OPEN",
+        "created_at": "2026-09-24T01:39:37.194Z",
+        "updated_at": "2026-09-24T01:39:37.194Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": null
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 57,
+    "fields": {
+        "title": "Ticket #14 - AC not cooling",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "Facilities",
+        "status": "OPEN",
+        "created_at": "2026-09-24T01:39:37.203Z",
+        "updated_at": "2026-09-24T01:39:37.203Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": null
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 58,
+    "fields": {
+        "title": "Ticket #15 - Internet Not Working",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "IT",
+        "status": "PENDING_TECH_ASSIGNMENT",
+        "created_at": "2026-09-24T01:39:37.214Z",
+        "updated_at": "2026-09-24T01:39:37.214Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": 13
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 59,
+    "fields": {
+        "title": "Ticket #16 - AC not cooling",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "Facilities",
+        "status": "PENDING_TECH_ASSESSMENT",
+        "created_at": "2026-09-24T01:39:37.223Z",
+        "updated_at": "2026-09-24T01:39:37.223Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": 14
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 60,
+    "fields": {
+        "title": "Ticket #17 - Internet Not Working",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "IT",
+        "status": "OPEN",
+        "created_at": "2026-09-24T01:39:37.231Z",
+        "updated_at": "2026-09-24T01:39:37.232Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": null
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 61,
+    "fields": {
+        "title": "Ticket #18 - AC not cooling",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "Facilities",
+        "status": "PENDING_TECH_ASSIGNMENT",
+        "created_at": "2026-09-24T01:39:37.240Z",
+        "updated_at": "2026-09-24T01:39:37.240Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": 13
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 62,
+    "fields": {
+        "title": "Ticket #19 - Internet Not Working",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "IT",
+        "status": "RESOLVED",
+        "created_at": "2026-09-24T01:39:37.249Z",
+        "updated_at": "2026-09-24T02:46:28.498Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": null
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 63,
+    "fields": {
+        "title": "Ticket #20 - AC not cooling",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "Facilities",
+        "status": "PENDING_TECH_ASSESSMENT",
+        "created_at": "2026-09-24T01:39:37.257Z",
+        "updated_at": "2026-09-24T01:39:37.257Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": 14
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 64,
+    "fields": {
+        "title": "Ticket #21 - Internet Not Working",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "IT",
+        "status": "PENDING_TECH_ASSESSMENT",
+        "created_at": "2026-09-24T01:39:37.267Z",
+        "updated_at": "2026-09-24T02:46:59.612Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": 13
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 65,
+    "fields": {
+        "title": "Ticket #22 - AC not cooling",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "Facilities",
+        "status": "PENDING_TECH_ASSESSMENT",
+        "created_at": "2026-09-24T01:39:37.276Z",
+        "updated_at": "2026-09-24T02:10:38.938Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": null
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 66,
+    "fields": {
+        "title": "Ticket #23 - Internet Not Working",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "IT",
+        "status": "PENDING_POC_REVIEW",
+        "created_at": "2026-09-24T01:39:37.285Z",
+        "updated_at": "2026-09-24T03:26:17.295Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": null
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 67,
+    "fields": {
+        "title": "Ticket #24 - AC not cooling",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "Facilities",
+        "status": "RESOLVED",
+        "created_at": "2026-09-24T01:39:37.294Z",
+        "updated_at": "2026-09-24T03:17:45.468Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": 13
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 68,
+    "fields": {
+        "title": "Ticket #25 - Internet Not Working",
+        "description": "The units are running but producing warm air. Multiple clients are complaining.",
+        "floors": "2F, 3F",
+        "concerned_department": "IT",
+        "status": "RESOLVED",
+        "created_at": "2026-09-24T01:39:37.303Z",
+        "updated_at": "2026-09-24T02:21:16.345Z",
+        "client": 10,
+        "facility_manager": 11,
+        "department_poc": 12,
+        "current_assignee": null
+    }
+},
+{
+    "model": "tickets.ticket",
+    "pk": 69,
+    "fields": {
+        "title": "1",
+        "description": "3",
+        "floors": "2",
+        "concerned_department": null,
+        "status": "RESOLVED",
+        "created_at": "2026-09-24T02:22:32.129Z",
+        "updated_at": "2026-09-24T02:25:12.415Z",
+        "client": 9,
+        "facility_manager": null,
+        "department_poc": null,
+        "current_assignee": null
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 19,
+    "fields": {
+        "ticket": 44,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.090Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 20,
+    "fields": {
+        "ticket": 45,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.101Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 21,
+    "fields": {
+        "ticket": 46,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.110Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 22,
+    "fields": {
+        "ticket": 47,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.118Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 23,
+    "fields": {
+        "ticket": 48,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.126Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 24,
+    "fields": {
+        "ticket": 49,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.134Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 25,
+    "fields": {
+        "ticket": 50,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.146Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 26,
+    "fields": {
+        "ticket": 51,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.154Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 27,
+    "fields": {
+        "ticket": 52,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.161Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 28,
+    "fields": {
+        "ticket": 53,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.170Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 29,
+    "fields": {
+        "ticket": 54,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.178Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 30,
+    "fields": {
+        "ticket": 55,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.189Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 31,
+    "fields": {
+        "ticket": 56,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.198Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 32,
+    "fields": {
+        "ticket": 57,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.210Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 33,
+    "fields": {
+        "ticket": 58,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.219Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 34,
+    "fields": {
+        "ticket": 59,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.228Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 35,
+    "fields": {
+        "ticket": 60,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.236Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 36,
+    "fields": {
+        "ticket": 61,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.245Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 37,
+    "fields": {
+        "ticket": 62,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.253Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 38,
+    "fields": {
+        "ticket": 63,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.262Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 39,
+    "fields": {
+        "ticket": 64,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.272Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 40,
+    "fields": {
+        "ticket": 65,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.281Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 41,
+    "fields": {
+        "ticket": 66,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.289Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 42,
+    "fields": {
+        "ticket": 67,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.299Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 43,
+    "fields": {
+        "ticket": 68,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": 10,
+        "is_comment": false,
+        "created_at": "2026-09-24T01:39:37.313Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 44,
+    "fields": {
+        "ticket": 68,
+        "action": "Comment: Testing common Comment was Host",
+        "performed_by": 9,
+        "is_comment": true,
+        "created_at": "2026-09-24T01:57:53.650Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 45,
+    "fields": {
+        "ticket": 68,
+        "action": "Comment: ",
+        "performed_by": 9,
+        "is_comment": true,
+        "created_at": "2026-09-24T02:00:32.598Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 46,
+    "fields": {
+        "ticket": 68,
+        "action": "Comment: hi",
+        "performed_by": 9,
+        "is_comment": true,
+        "created_at": "2026-09-24T02:00:44.340Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 47,
+    "fields": {
+        "ticket": 68,
+        "action": "admin (Technical Manager) assigned technician.",
+        "performed_by": 9,
+        "is_comment": false,
+        "created_at": "2026-09-24T02:09:45.561Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 48,
+    "fields": {
+        "ticket": 66,
+        "action": "admin (Technical Manager) assigned technician.",
+        "performed_by": 9,
+        "is_comment": false,
+        "created_at": "2026-09-24T02:09:56.870Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 49,
+    "fields": {
+        "ticket": 65,
+        "action": "admin (Technical Manager) assigned technician.",
+        "performed_by": 9,
+        "is_comment": false,
+        "created_at": "2026-09-24T02:10:38.943Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 50,
+    "fields": {
+        "ticket": 62,
+        "action": "admin (Technical Manager) assigned technician.",
+        "performed_by": 9,
+        "is_comment": false,
+        "created_at": "2026-09-24T02:10:55.063Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 51,
+    "fields": {
+        "ticket": 50,
+        "action": "admin (Technical Manager) assigned technician.",
+        "performed_by": 9,
+        "is_comment": false,
+        "created_at": "2026-09-24T02:11:09.669Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 52,
+    "fields": {
+        "ticket": 44,
+        "action": "admin (Technical Manager) assigned technician.",
+        "performed_by": 9,
+        "is_comment": false,
+        "created_at": "2026-09-24T02:13:46.314Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 53,
+    "fields": {
+        "ticket": 60,
+        "action": "Comment: hi",
+        "performed_by": 9,
+        "is_comment": true,
+        "created_at": "2026-09-24T02:17:42.595Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 54,
+    "fields": {
+        "ticket": 68,
+        "action": "admin (Technician) marked issue as fully resolved. Note: ",
+        "performed_by": 9,
+        "is_comment": false,
+        "created_at": "2026-09-24T02:21:16.351Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 55,
+    "fields": {
+        "ticket": 68,
+        "action": "Comment: hi",
+        "performed_by": 9,
+        "is_comment": true,
+        "created_at": "2026-09-24T02:21:42.705Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 56,
+    "fields": {
+        "ticket": 69,
+        "action": "admin created the ticket.",
+        "performed_by": 9,
+        "is_comment": false,
+        "created_at": "2026-09-24T02:22:32.130Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 57,
+    "fields": {
+        "ticket": 69,
+        "action": "System auto-assigned the ticket.",
+        "performed_by": null,
+        "is_comment": false,
+        "created_at": "2026-09-24T02:22:32.130Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 58,
+    "fields": {
+        "ticket": 69,
+        "action": "Comment: hi",
+        "performed_by": 9,
+        "is_comment": true,
+        "created_at": "2026-09-24T02:22:49.572Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 59,
+    "fields": {
+        "ticket": 69,
+        "action": "admin (Technical Manager) assigned technician.",
+        "performed_by": 9,
+        "is_comment": false,
+        "created_at": "2026-09-24T02:25:05.659Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 60,
+    "fields": {
+        "ticket": 69,
+        "action": "admin (Technician) marked issue as fully resolved. Note: ",
+        "performed_by": 9,
+        "is_comment": false,
+        "created_at": "2026-09-24T02:25:12.422Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 61,
+    "fields": {
+        "ticket": 62,
+        "action": "admin marked issue as fully resolved. Note: ",
+        "performed_by": 9,
+        "is_comment": false,
+        "created_at": "2026-09-24T02:46:28.506Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 62,
+    "fields": {
+        "ticket": 64,
+        "action": "admin assigned technician.",
+        "performed_by": 9,
+        "is_comment": false,
+        "created_at": "2026-09-24T02:46:59.621Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 63,
+    "fields": {
+        "ticket": 64,
+        "action": "Comment: hi",
+        "performed_by": 9,
+        "is_comment": true,
+        "created_at": "2026-09-24T02:47:13.984Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 64,
+    "fields": {
+        "ticket": 61,
+        "action": "Comment: hi",
+        "performed_by": 9,
+        "is_comment": true,
+        "created_at": "2026-09-24T02:47:33.203Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 65,
+    "fields": {
+        "ticket": 67,
+        "action": "admin assigned technician.",
+        "performed_by": 9,
+        "is_comment": false,
+        "created_at": "2026-09-24T03:17:40.245Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 66,
+    "fields": {
+        "ticket": 67,
+        "action": "admin marked issue as fully resolved. Note: ",
+        "performed_by": 9,
+        "is_comment": false,
+        "created_at": "2026-09-24T03:17:45.474Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 67,
+    "fields": {
+        "ticket": 67,
+        "action": "Comment: gg",
+        "performed_by": 9,
+        "is_comment": true,
+        "created_at": "2026-09-24T03:18:08.645Z"
+    }
+},
+{
+    "model": "tickets.ticketauditlog",
+    "pk": 68,
+    "fields": {
+        "ticket": 66,
+        "action": "admin suggested department/worker change. Note: ",
+        "performed_by": 9,
+        "is_comment": false,
+        "created_at": "2026-09-24T03:26:17.301Z"
+    }
+}
+]
