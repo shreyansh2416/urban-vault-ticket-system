@@ -14,7 +14,10 @@ function App() {
   
   const [tabValue, setTabValue] = useState(0);
   const [ordering, setOrdering] = useState('-created_at');
-  // All 4 explicit mandatory filters
+  
+  // REQUIREMENT: Search query state and loading state added
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [filters, setFilters] = useState({ client: '', concerned_department: '', facility_manager: '' });
 
   const [openCreate, setOpenCreate] = useState(false);
@@ -27,7 +30,8 @@ function App() {
       const tabState = tabValue === 0 ? 'open' : 'closed';
       let url = `/tickets/?page=${page + 1}&tab=${tabState}&ordering=${ordering}`;
       
-      // Append all mandatory filters if typed
+      // Append filters and search query
+      if (searchQuery) url += `&search=${searchQuery}`;
       if (filters.concerned_department) url += `&concerned_department=${filters.concerned_department}`;
       if (filters.client) url += `&client=${filters.client}`;
       if (filters.facility_manager) url += `&facility_manager=${filters.facility_manager}`;
@@ -42,7 +46,7 @@ function App() {
 
   useEffect(() => {
     fetchTickets();
-  }, [page, tabValue, ordering, filters]);
+  }, [page, tabValue, ordering, filters, searchQuery]);
 
   const handleCreate = async () => {
     try {
@@ -91,8 +95,13 @@ function App() {
           </Tabs>
         </Box>
 
-        {/* 4 Explicit Filters & Sort Bar */}
         <Box sx={{ mb: 3, display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'center' }}>
+          {/* REQUIREMENT: Global Search Bar */}
+          <TextField 
+            label="Search Tickets..." size="small" sx={{ width: 200 }}
+            value={searchQuery}
+            onChange={(e) => { setSearchQuery(e.target.value); setPage(0); }}
+          />
           <TextField 
             label="Department" size="small" sx={{ width: 150 }}
             value={filters.concerned_department}
@@ -162,7 +171,6 @@ function App() {
         </TableContainer>
       </Container>
 
-      {/* Creation Modal with multiple Conditional fields */}
       <Dialog open={openCreate} onClose={() => setOpenCreate(false)} fullWidth maxWidth="sm">
         <DialogTitle fontWeight="bold">Create New Ticket</DialogTitle>
         <DialogContent>
@@ -202,7 +210,6 @@ function App() {
           {newTicket.clientMapping === 'multi' && (
             <TextField
               margin="dense" label="Client*" fullWidth variant="outlined"
-              helperText="Select the specific client affected."
               value={newTicket.selectedClient} onChange={(e) => setNewTicket({ ...newTicket, selectedClient: e.target.value })}
               sx={{ mb: 2 }}
             />
@@ -211,7 +218,6 @@ function App() {
           {newTicket.officeType === 'multi' && (
             <TextField
               margin="dense" label="Floor(s)*" fullWidth variant="outlined"
-              helperText="Your office has multiple floors - please select where the issue is."
               value={newTicket.floors} onChange={(e) => setNewTicket({ ...newTicket, floors: e.target.value })}
               sx={{ mb: 2 }}
             />
@@ -224,11 +230,23 @@ function App() {
         </DialogContent>
         <DialogActions sx={{ p: 2, pt: 0 }}>
           <Button onClick={() => setOpenCreate(false)} color="inherit">Cancel</Button>
-          <Button onClick={handleCreate} variant="contained" color="primary">Submit Ticket</Button>
+          
+          {/* REQUIREMENT: Prevents Duplicate Submissions by disabling when submitting */}
+          <Button 
+            onClick={async () => {
+              setIsSubmitting(true);
+              await handleCreate();
+              setIsSubmitting(false);
+            }} 
+            variant="contained" 
+            color="primary"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'Submitting...' : 'Submit Ticket'}
+          </Button>
         </DialogActions>
       </Dialog>
 
-      {/* Ticket Detail & Alternate Branch Actions */}
       <Dialog open={Boolean(selectedTicket)} onClose={() => setSelectedTicket(null)} fullWidth maxWidth="md">
         {selectedTicket && (
           <>

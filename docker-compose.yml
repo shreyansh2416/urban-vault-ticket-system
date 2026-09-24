@@ -5,40 +5,47 @@ services:
     image: postgres:15
     environment:
       POSTGRES_DB: urbanvault
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgrespassword
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
     ports:
       - "5432:5432"
 
   redis:
-    image: redis:7
+    image: redis:alpine
     ports:
       - "6379:6379"
 
-  web:
+  backend:
     build: ./backend
-    command: sh -c "sleep 20 && python manage.py makemigrations && python manage.py migrate && python seed.py && python manage.py runserver 0.0.0.0:8000"
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./backend:/app
     ports:
       - "8000:8000"
-    env_file:
-      - ./backend/.env.example
     depends_on:
       - db
+      - redis
+    environment:
+      - DATABASE_URL=postgres://admin:password@db:5432/urbanvault
+      - CELERY_BROKER_URL=redis://redis:6379/0
 
   celery:
     build: ./backend
     command: celery -A core worker -l info
     volumes:
       - ./backend:/app
-    env_file:
-      - ./backend/.env.example
     depends_on:
       - db
       - redis
+      - backend
+    environment:
+      - DATABASE_URL=postgres://admin:password@db:5432/urbanvault
+      - CELERY_BROKER_URL=redis://redis:6379/0
 
-volumes:
-  postgres_data:
+  frontend:
+    build: ./frontend
+    command: npm run dev -- --host
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "3000:3000"

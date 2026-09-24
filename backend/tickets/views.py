@@ -11,10 +11,14 @@ class TicketViewSet(viewsets.ModelViewSet):
     serializer_class = TicketSerializer
     permission_classes = [permissions.IsAuthenticated]
     
-    filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
+    # REQUIREMENT: Added filters.SearchFilter
+    filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
     filterset_fields = ['status', 'client', 'concerned_department', 'facility_manager']
     ordering_fields = ['created_at']
     ordering = ['-created_at']
+    
+    # REQUIREMENT: Allows searching by typing text in frontend
+    search_fields = ['title', 'description']
 
     def get_queryset(self):
         qs = Ticket.objects.select_related(
