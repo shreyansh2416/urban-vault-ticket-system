@@ -53,3 +53,15 @@ For a live production environment, I would deploy this architecture using the fo
 - Cache/Broker: Amazon ElastiCache (Redis) to act as the Celery broker.
 - Frontend: The React application would be compiled to static files and hosted on an S3 Bucket distributed via CloudFront CDN for global low-latency delivery.
 - Secrets Management: AWS Secrets Manager to inject DATABASE_URL and SECRET_KEY directly into the ECS containers at runtime.
+
+## API Endpoints
+- `GET /api/tickets/` - List tickets (Supports `?tab=open/closed`, `?search=`, and filters)
+- `POST /api/tickets/` - Create a new ticket
+- `GET /api/tickets/{id}/` - Retrieve a specific ticket detail
+- `POST /api/tickets/{id}/workflow_action/` - Execute state-machine transitions (assign worker, mark resolved, etc.)
+
+## Actual Time Spent
+- Approximately 7-8 hours.
+
+## AI-Assisted Development Disclosure
+During the development of this assignment, I utilized AI coding assistants (including Cursor and Gemini) as thought partners. I leveraged them to help scaffold boilerplate Django/React configurations, generate the dummy seed data for testing, debug CSS rendering quirks in Material UI, and format complex query syntax. I independently directed the architectural decisions, designed the state-machine logic, structured the relational models, and implemented the RBAC constraints. I am fully prepared to explain, navigate, and modify all submitted code during the follow-up technical discussion.
